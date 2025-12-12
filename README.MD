@@ -1,10 +1,6 @@
 # The Foundry AI Workbench
 
 <p align="center">
-  <img src="https://your-domain.com/path/to/your/foundry-logo.svg" alt="Foundry AI Logo" width="200"/>
-</p>
-
-<p align="center">
   <strong>The definitive, cloud-native platform for the entire AI research lifecycle. Go from idea to optimized, shareable model 10x faster.</strong>
 </p>
 
@@ -18,45 +14,77 @@
     <a href="https://discord.gg/your-invite-link">
         <img src="https://img.shields.io/discord/81384788765712384.svg?logo=discord&label=Community&color=7289DA&style=for-the-badge" alt="Discord"/>
     </a>
+    <a href="https://github.com/your-org/foundry-workbench/blob/main/LICENSE">
+        <img src="https://img.shields.io/badge/License-Apache_2.0-green?style=for-the-badge" alt="License"/>
+    </a>
 </p>
 
 ---
 
-## Your Research Lab is Holding You Back.
+## The End of Friction in AI Research
 
-Modern AI research is a battle against friction. You're fighting with CUDA drivers, waiting in cluster queues, wrestling with disconnected tools, and struggling to share your results. Your great ideas are being slowed down by infrastructure, not by the limits of your imagination.
+Modern AI research is a story of profound contradiction. We are building the most powerful tools in human history, yet our own workflows are a patchwork of friction, frustration, and wasted time. Your breakthrough ideas are constrained not by the limits of your intellect, but by the clumsiness of your tools.
 
-**The Foundry AI Workbench eliminates this friction.**
+We know your pain because we have lived it:
 
-We provide a single, unified, web-based platform that combines a best-in-class development environment with a powerful, scalable backend and a suite of proprietary AI-powered tools. The Workbench is designed for one purpose: to maximize your research velocity.
+*   **The Environment Hell:** Weeks wasted battling `nvidia-smi`, `cuDNN` versions, and cryptic `pip` dependency conflicts just to replicate a paper or start a new project.
+*   **The Scaling Chasm:** A model works perfectly in a notebook on a tiny data sample, but scaling it up to the full dataset on a multi-GPU cluster requires a painful, time-consuming rewrite and a deep dive into DevOps.
+*   **The Disconnected Workflow:** Your code is in Git, your experiment metrics are in a spreadsheet, your model weights are in a cloud bucket, and your notes are in a text file. Nothing is connected. Your research is fragmented.
+*   **The "It Works on My Machine" Crisis:** Sharing your work with a collaborator or your advisor is a fraught process of zipped files and READMEs, hoping they can recreate your environment and get the same results.
 
-<p align="center">
-  <img src="https://your-domain.com/path/to/workbench-screenshot.png" alt="Foundry Workbench Screenshot" width="800"/>
-</p>
+> The Foundry AI Workbench was built to solve this. We believe that the tools of innovation should be as elegant and powerful as the ideas they help create. Our mission is to eliminate all non-essential friction from the AI research lifecycle, so you can focus on one thing: **discovery.**
+
+---
 
 ## What is the Foundry Workbench?
 
-The Foundry Workbench is an end-to-end MLOps and research platform. This repository contains the full source code for the self-hostable, open-source version of the Workbench. Our core philosophy is to integrate the entire research workflow into a single, seamless experience.
+The Foundry Workbench is a single, unified, web-based platform that integrates the entire MLOps and research workflow into a seamless experience. This repository contains the full, open-source source code. We combine a best-in-class development environment with a powerful, scalable backend and a suite of proprietary AI-powered tools that you won't find anywhere else.
 
-| Feature | Description | Status |
-| :--- | :--- | :--- |
-| **Cloud IDE** | A fully-managed, in-browser IDE that feels like a supercharged JupyterLab. Launch pre-configured environments with all the latest AI frameworks in a single click. No more `pip install` hell. | `Stable` |
-| **Scalable Compute**| Seamlessly scale your experiments from a notebook to a powerful multi-GPU cluster with a single "Run as Job" button. We handle all the DevOps, so you can focus on the science. | `Stable` |
-| **Experiment Tracking**| Automatically track every experiment you run. A beautiful, integrated dashboard allows you to compare hyperparameters, metrics, and model artifacts across hundreds of runs without writing a single extra line of code. | `Stable` |
-| **`[Proprietary]` CAFT Acceleration** | **The Turbo Button for Fine-Tuning.** Our proprietary Cached Activation Fine-Tuning (CAFT) algorithm is built-in, making your transfer learning jobs up to **10x faster and cheaper** than on any other platform. | `Integrated` |
-| **`[Proprietary]` MoCA-NAS** | **The AI Architect.** Go beyond training existing models. Use our Modular Cached-Activation Neural Architecture Search (MoCA-NAS) to automatically discover novel, high-performance architectures specifically for your dataset. | `Integrated` |
-| **1-Click Model Demos**| The ultimate sharing tool. Take any model from your experiment tracker and, with a single click, deploy it as a live, interactive web demo (powered by Gradio/Streamlit) that you can share with anyone in the world. | `Stable` |
+| Feature | Description |
+| :--- | :--- |
+| **Cloud IDE** | A fully-managed, in-browser IDE that feels like a supercharged JupyterLab. Launch pre-configured, versioned environments with all the latest AI frameworks in a single click. Your environment is now a solved problem. |
+| **Scalable Compute** | Seamlessly scale your experiments from a notebook on a single GPU to a distributed training job on a powerful multi-GPU cluster with a single "Run as Job" button. We handle the containerization, scheduling, and infrastructure, so you can focus on the science. |
+| **Experiment Tracking** | Automatically track every experiment you run without any instrumentation. A beautiful, integrated dashboard allows you to compare hyperparameters, metrics, code versions, and model artifacts across hundreds of runs. Your `results.csv` file is officially retired. |
+| **`[Proprietary Magic ✨]` CAFT Acceleration** | **The Turbo Button for Fine-Tuning.** Our proprietary Cached Activation Fine-Tuning (CAFT) algorithm is built-in. By enabling it with a single checkbox, your transfer learning jobs will run up to **10x faster and cheaper** than on any other platform. Test ten ideas in the time it used to take for one. |
+| **`[Proprietary Magic ✨]` MoCA-NAS** | **The AI Architect.** Go beyond training existing models. Use our Modular Cached-Activation Neural Architecture Search (MoCA-NAS) to automatically discover novel, high-performance architectures specifically for your dataset, powered by a library of pre-trained sub-module weights. |
+| **1-Click Model Demos**| The ultimate sharing tool. Take any model from your experiment tracker and, with a single click, deploy it as a live, interactive web demo (powered by Gradio/Streamlit). You are now one click away from a compelling, shareable proof of your work. |
 
-## 🚀 Get Started
+---
 
-The Foundry Workbench is a complex, multi-service application. The recommended way to get started is by using our official Docker Compose setup for local development.
+## The Foundry Philosophy
+
+Our design is guided by a few core principles:
+
+*   **Velocity is the Master Metric:** The most valuable resource in research is the time of the researcher. Every feature we build is judged by one question: does this increase the number of ideas a researcher can test per day?
+*   **Integrate, Don't Disintegrate:** A researcher's workflow should be a river, not a series of disconnected ponds. We believe in a deeply integrated experience where your code, data, experiments, and models are all part of a single, cohesive whole.
+*   **Automate the Mundane:** You should spend your time on creative, high-impact work. We relentlessly automate the tedious, repetitive tasks of DevOps, environment management, and results logging.
+*   **From Research to Reality:** A research project is not complete until it can be used. We provide a seamless, one-click path from a trained model in a lab environment to an optimized, deployable asset for the real world.
+
+---
+
+## A Researcher's Journey on the Workbench
+
+To understand the power of Foundry, consider this workflow:
+
+1.  **The Spark:** Alex, a PhD student, has a novel idea for a multi-modal classification model. She logs into the Foundry Workbench, selects the "PyTorch + Vision & Text" environment, and immediately starts coding her model in a familiar JupyterLab interface.
+2.  **The Test:** She tests her model on a small, local sample of the data, iterating quickly within the notebook.
+3.  **The Discovery:** Instead of designing a full architecture from scratch, she uses the **MoCA-NAS "Architecture Composer"** to define a search space, leveraging pre-trained blocks from ResNet and BERT. She launches the search as a "Job" on a small GPU cluster.
+4.  **The Analysis:** The results appear in her **Experiment Tracker**. She sees that a novel hybrid architecture discovered by MoCA-NAS significantly outperforms the baseline.
+5.  **The Scale-Up:** She takes the winning architecture and launches a full fine-tuning run on the entire dataset, enabling **CAFT Acceleration** with a single click. The job, which would have taken 20 hours, completes in just 2.
+6.  **The Showcase:** Her final model has state-of-the-art accuracy. She clicks the **"Create Live Demo"** button. The Workbench gives her a public URL. She pastes this link into her team's Slack and her draft research paper. Her advisor and collaborators can now interact with her live model directly from their browsers.
+
+---
+
+## Getting Started
+
+The Foundry Workbench is a complex, multi-service application. The recommended way to get started for local development and evaluation is by using our official Docker Compose setup.
 
 **1. Clone the Repository:**```bash
 git clone https://github.com/your-org/foundry-workbench.git
 cd foundry-workbench```
 
 **2. Configure Your Environment:**
-Copy the example environment file and customize it if needed.
+Copy the example environment file. For a basic local setup, you likely won't need to change anything.
 ```bash
 cp .env.example .env
 ```
@@ -65,31 +93,21 @@ cp .env.example .env
 ```bash
 docker-compose up -d --build
 ```
-This will build and start all the necessary services (frontend, backend, database, etc.). After a few minutes, you can access the Foundry Workbench by navigating to `http://localhost:3000` in your browser.
+This command will pull all necessary images, build your containers, and start all the services (frontend, backend, database, Redis, etc.). After the initial build completes (which may take several minutes), you can access the Foundry Workbench by navigating to `http://localhost:3000` in your browser.
 
-For detailed instructions on configuration, deployment to Kubernetes, and connecting to external data sources, please see our full **[Documentation](https://docs.foundry.ai)**.
+For detailed instructions on configuration, deploying to Kubernetes for production, and connecting to external data sources, please see our full **[Documentation](https://docs.foundry.ai)**.
 
-## The Foundry Ecosystem
+---
 
-The Workbench is the heart of our ecosystem, which also includes our high-performance commercial platform for production deployment.
+## The Broader Ecosystem: From Research to Production
 
-### [Ignition Hub](https://ignition-hub.ai) (Commercial Platform)
-The Foundry Workbench is designed for *research and discovery*. When it's time to move a model to a high-performance production environment, the Workbench provides a seamless, one-click handoff to `Ignition Hub`.
+The Foundry Workbench is designed for *research and discovery*. When it's time to move a model to a high-performance production environment, the Workbench provides a seamless, one-click handoff to our commercial platform, **[Ignition Hub](https://ignition-hub.ai)**.
 
-`Ignition Hub` takes your trained model and compiles it into a hyper-optimized TensorRT engine for any target hardware, unlocking an additional 10x performance boost for real-world deployment in robotics, automotive, or large-scale cloud services.
+While the Workbench helps you *find the best model*, Ignition Hub takes that model and makes it *the fastest it can possibly be*, compiling it into a hyper-optimized TensorRT engine for deployment in real-time, mission-critical applications.
 
-## Architecture Overview
+---
 
-This is a monorepo containing all the services and packages for the Foundry Workbench.
-
-*   **`/apps/`**: Contains the main, deployable applications (frontend, API gateway, core backend).
-*   **`/services/`**: Contains specialized, headless microservices (the job runner, the demo app service).
-*   **`/packages/`**: Contains shared code and libraries used across the monorepo (UI components, shared types).
-*   **`/infra/`**: Contains Infrastructure as Code (Terraform, Kubernetes) for deploying the platform.
-
-For a deep dive into the architecture, see our `ARCHITECTURE.md` file.
-
-## Join the Community
+## Community & Contribution
 
 The future of AI research is collaborative. We are building Foundry in the open and would love for you to be a part of it.
 
@@ -97,9 +115,11 @@ The future of AI research is collaborative. We are building Foundry in the open 
 *   **🗺️ [Check out our Public Roadmap](https://github.com/your-org/foundry-workbench/projects/1):** See what we're working on next and vote on the features that matter most to you.
 *   **✨ [Contribute](https://github.com/your-org/foundry-workbench/blob/main/CONTRIBUTING.md):** From fixing a typo in the documentation to implementing a new feature, all contributions are welcome. Please read our contributing guide to get started.
 
+---
+
 ## Citing The Foundry Workbench
 
-If you use the Foundry AI Workbench in your academic research, please cite our work. This helps us continue to support the research community.
+If you use the Foundry AI Workbench in your academic research, citing our work helps us secure the resources to continue supporting the research community.
 
 ```bibtex
 @software{Foundry_AI_Workbench,
@@ -109,7 +129,3 @@ If you use the Foundry AI Workbench in your academic research, please cite our w
   year = {2025}
 }
 ```
-
----
-
-**Built with ❤️ for the research community by the Foundry AI Team.**
