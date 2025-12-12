@@ -1,0 +1,20 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "pipeline": {
+        "build": {
+            // "build" tasks in apps depend on the "build" tasks of their internal packages.
+            "dependsOn": ["^build"],
+            // The outputs of the build command will be cached.
+            "outputs": [".next/**", "dist/**"]
+        },
+        "lint": {
+            // Linting has no dependencies.
+            "outputs": []
+        },
+        "dev": {
+            // The "dev" command will be cached, but not for long.
+            "cache": "false",
+            "persistent": true
+        }
+    }
+}
