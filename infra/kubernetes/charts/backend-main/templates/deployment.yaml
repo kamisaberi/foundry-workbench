@@ -1,0 +1,54 @@
+# This is a Kubernetes manifest, written in YAML. It's a declarative recipe
+# that tells the cluster how to run and manage our main backend application.
+# It uses Helm templating for flexibility.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # The name of our deployment.
+  name: {{ .Release.Name }}-backend-main
+  labels:
+    app: backend-main
+spec:
+  # We want to run this many copies (pods) of our application for high availability.
+  replicas: {{ .Values.replicaCount | default 3 }}
+  selector:
+    matchLabels:
+      app: backend-main
+  template:
+    metadata:
+      labels:
+        app: backend-main
+    spec:
+      containers:
+        - name: backend-main
+          # This specifies the Docker image to use. The version is dynamic.
+          image: "your-docker-registry/backend-main:{{ .Chart.AppVersion }}"
+          imagePullPolicy: IfNotPresent
+          ports:
+            # The port the application listens on inside the container.
+            - containerPort: 8000
+          # Health checks to ensure the application is running correctly.
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+          # Resource requests and limits to ensure stable performance.
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+            limits:
+              cpu: "1000m"
+              memory: "2048Mi"
+          # Environment variables, including secrets, would be injected here.
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: backend-secrets
+                  key: database-url
