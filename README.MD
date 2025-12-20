@@ -123,7 +123,7 @@ If you use the Foundry AI Workbench in your academic research, citing our work h
 
 ```bibtex
 @software{Foundry_AI_Workbench,
-  author = {[Kamran Saberifard] and The Foundry AI Team},
+  author = {Kamran Saberifard and The Foundry AI Team},
   title = {{The Foundry AI Workbench: An Integrated Platform for Accelerated AI Research}},
   url = {https://github.com/kamisaberi/foundry-workbench},
   year = {2025}
